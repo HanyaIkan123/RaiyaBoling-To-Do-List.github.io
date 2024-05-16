@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <h2>User Profile</h2>
+            <p id="user-name">Name: Raiya</p>
+            <p id="user-level">Level: 1</p>
+            <p id="user-score">Score: 0</p>
+        </div>
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <input type="datetime-local" id="task-deadline">
+            <button id="add-task-btn">Add</button>
+            <input type="text" id="update-task" placeholder="Update task" style="display: none;">
+            <input type="datetime-local" id="update-deadline" style="display: none;">
+            <button id="update-task-btn" style="display: none;">Update</button>
+        </div>
+        <div class="task-container">
+
+            <h2 style="color: black; background-color: yellow; border-radius: 10px;">In Progress</h2>
+            <table id="in-progress-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="in-progress-list"></tbody>
+            </table>
+            <h2 style="color: black; background-color: red; border-radius: 10px;">Deleted</h2>
+            <table id="deleted-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                    </tr>
+                </thead>
+                <tbody id="deleted-list"></tbody>
+            </table>
+            <h2 style="color: black; background-color: purple; border-radius: 10px;">Edited</h2>
+            <table id="edited-table">
+                <thead>
+                    <tr>
+                        <th>Original Task</th>
+                        <th>New Task</th>
+                        <th>Deadline</th>
+                    </tr>
+                </thead>
+                <tbody id="edited-list"></tbody>
+            </table>
+            <h2 style="color: black; background-color: green; border-radius: 10px;">Completed</h2>
+            <table id="completed-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                    </tr>
+                </thead>
+                <tbody id="completed-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
